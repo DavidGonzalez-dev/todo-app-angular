@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+/* Variables */
+:root {
+  --primary-color:#465C88;
+  --secondary-color: #FF7A30;
+  --background-color:  #212121;
+  --light-grey:#3b3b3b ;
+  --font-color: #d8cac0;
+  --font-family: 'General Sans', sans-serif;
+  --font-size: 15px
+}
+
+/* HTML reset */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-color:var(--background-color);
+  color: var(--font-color);
+}
+
+body {
+  width: 60vw;
+  padding: 10vh 0;
+  display: flex;
+  place-self: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

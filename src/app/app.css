@@ -1,0 +1,19 @@
+#task-counter {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    border: 2px solid var(--font-color);
+    border-radius: 30px;
+    padding: 7vh 5vw;
+}
+
+#task-counter h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+#task-counter span {
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}

@@ -1,0 +1,15 @@
+#task-counter-container {
+    background-color: var(--secondary-color);
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+#tasks-counter {
+    color: var(--background-color);
+    font-size: 3.5rem;
+    font-weight: 700;
+}
