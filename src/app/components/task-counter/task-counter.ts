@@ -1,4 +1,4 @@
-import {  Component, effect  } from '@angular/core';
+import {  Component, computed  } from '@angular/core';
 import { TasksSignal } from '../../tasks.signals';
 
 @Component({
@@ -8,15 +8,12 @@ import { TasksSignal } from '../../tasks.signals';
   styleUrl: './task-counter.css',
 })
 export class TaskCounterComponent {
-  readonly count = {
-    completed: 0,
-    total: 0
-  }
+  
+  readonly count = computed(() => ({
+    completed: TasksSignal().filter(task => task.completed).length,
+    total: TasksSignal().length
+  }))
 
-  constructor () {
-    effect(() => {
-      this.count.completed = TasksSignal().filter(task => task.completed).length
-      this.count.total = TasksSignal().length
-    })
-  }
+  readonly allTaskCompleted = computed(() => this.count().completed === this.count().total && this.count().total > 0)
+
 }

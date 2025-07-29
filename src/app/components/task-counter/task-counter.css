@@ -6,10 +6,19 @@
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+    transition: .25s ease-out;
 }
 
 #tasks-counter {
     color: var(--background-color);
     font-size: 3.5rem;
     font-weight: 700;
+}
+
+#task-counter-container.completed {
+    background-color: green;
+}
+
+#task-counter-container.completed span{
+    color: var(--primary-text-color);
 }

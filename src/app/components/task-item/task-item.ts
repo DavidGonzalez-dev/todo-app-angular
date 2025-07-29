@@ -9,14 +9,20 @@ import { Task } from '../../models/Task.model';
 })
 export class TaskItemComponent {
   taskInfo = input<Task>({id: 0, description: '', completed: false})
-  
+  isFadingOut = false;
+
   taskChange = output<Task>()
   toggleComplete() {
     this.taskChange.emit({...this.taskInfo(), completed: !this.taskInfo().completed})
   }
-  
+
   taskDelete = output<Task>()
+  triggerDeleteTask() {
+    this.isFadingOut = true;
+  }
   deleteTask() {
-    this.taskDelete.emit(this.taskInfo())
+    if (this.isFadingOut) {
+      this.taskDelete.emit(this.taskInfo())
+    }
   }
 }
