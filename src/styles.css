@@ -3,8 +3,9 @@
   --primary-color:#465C88;
   --secondary-color: #FF7A30;
   --background-color:  #212121;
-  --light-grey:#3b3b3b ;
-  --font-color: #d8cac0;
+  --light-grey:#3b3b3b;
+  --primary-text-color: #d8cac0;
+  --secondary-text-color: #777676;
   --font-family: 'General Sans', sans-serif;
   --font-size: 15px
 }
@@ -17,7 +18,7 @@ html, body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   background-color:var(--background-color);
-  color: var(--font-color);
+  color: var(--primary-text-color);
 }
 
 body {

@@ -6,7 +6,7 @@ import { TaskCounterComponent } from './components/task-counter/task-counter';
 
 @Component({
   selector: 'app-root',
-  imports: [TaskFormComponent, TaskItemComponent, TaskListComponent, TaskCounterComponent],
+  imports: [TaskFormComponent, TaskListComponent, TaskCounterComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

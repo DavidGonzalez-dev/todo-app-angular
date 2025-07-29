@@ -1,0 +1,74 @@
+.task-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 20px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+button {
+    cursor: pointer;
+}
+
+.information {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.information .complete-button {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    transition: .25s all;
+}
+
+.information .complete-button:hover {
+    background-color: var(--secondary-color);
+    border-color: transparent;
+    scale: 1.1;
+}
+
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+    color: var(--secondary-text-color);
+    transition: .25s;
+}
+
+.delete-button svg{
+    height: 2rem;
+    width: 2rem;
+}
+
+.delete-button:hover {
+    color: #d33e3e;
+}
+
+.task-item.done span {
+    text-decoration:line-through;
+}
+
+.task-item.done .complete-button{
+    background-color: green;
+    border-color: transparent;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

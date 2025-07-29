@@ -1,1 +1,5 @@
-<p>task-list works!</p>
+<div id="tasks-list">
+    @for (task of tasks; track $index) {
+         <app-task-item [taskInfo]="task" (taskChange)="updateTask($event)" (taskDelete)="deleteTask($event)"/>
+    }
+</div>
