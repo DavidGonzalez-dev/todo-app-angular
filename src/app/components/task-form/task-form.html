@@ -1,1 +1,9 @@
-<p>task-form works!</p>
+<div id="form-container">
+    <form (submit)="registerTask()" id="task-form">
+        <input type="text" placeholder="write your next task" [formControl]="taskDescription">
+        <button type="submit">+</button>
+    </form>
+    @if (validationError != "") {
+    <span class="error-message">{{validationError}}</span>
+    }
+</div>
