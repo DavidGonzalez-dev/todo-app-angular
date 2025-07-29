@@ -8,21 +8,15 @@ import { Task } from '../../models/Task.model';
   styleUrl: './task-item.css'
 })
 export class TaskItemComponent {
-  taskInfo = input<Task>({id: 0, description: '', completed: false})
-  isFadingOut = false;
+  taskInfo = input<Task>({ id: 0, description: '', completed: false })
 
   taskChange = output<Task>()
   toggleComplete() {
-    this.taskChange.emit({...this.taskInfo(), completed: !this.taskInfo().completed})
+    this.taskChange.emit({ ...this.taskInfo(), completed: !this.taskInfo().completed })
   }
 
   taskDelete = output<Task>()
-  triggerDeleteTask() {
-    this.isFadingOut = true;
-  }
   deleteTask() {
-    if (this.isFadingOut) {
-      this.taskDelete.emit(this.taskInfo())
-    }
+    this.taskDelete.emit(this.taskInfo())
   }
 }
